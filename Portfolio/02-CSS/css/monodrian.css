@@ -1,0 +1,47 @@
+div{
+    border: 10px solid;
+}
+
+.col1{
+    width: 30px;
+}
+
+.col2{
+    width: 120px;
+    position: absolute; 
+    left: 45px;
+}
+
+.col3{
+    width: 30px; 
+    position: absolute; 
+    left: 175px;
+}
+
+.col4{
+    width: 120px;
+    position: absolute;
+    left: 215px;
+}
+
+.col5{
+    width: 120px;
+    position: absolute;
+    left: 345px;
+}
+
+.top{
+    top: 81px;
+}
+
+.middle{
+    top: 139px;
+}
+
+.btm{
+    top: 279px;
+}
+
+.lowbtm{
+    top: 358px;
+}

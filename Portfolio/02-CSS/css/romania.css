@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.caja1 {
+    position: relative;
+    left: 400px;
+}
+
+.caja2 {
+    position: relative;
+    top: -216px;
+}
+
+.caja3 {
+    position: relative;
+    top: -432px;
+    left: 200px;
+}
+

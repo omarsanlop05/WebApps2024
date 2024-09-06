@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+div{
+    height: 200px;
+    width: 200px;
+}
+
+.caja1{
+    position: absolute;
+    top: 480px;
+    left: 400px;
+}
+
+.caja2{
+    position: absolute;
+    top: 280px;
+    left: 200px;
+}
+
+.caja3{
+    position: absolute;
+}
