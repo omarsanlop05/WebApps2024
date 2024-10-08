@@ -9,6 +9,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Exercise - Find Next Prime Number</title>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <input type="text" id="num" />
+            <button id="btn" onclick="checkPrime(); return false">
+                Click To Get Next Prime Number</button>
+            <div id="result"></div>
+        </div>
+    </form>
 
     <script type="text/javascript">
         function checkPrime() {
@@ -19,14 +30,20 @@
                 for (var i = number + 1; i < maxNum; i++) {
                     //TODO: check if the current number is a prime or not
                     // If it is, then return it
-                    continue;
+                    if(isPrime(i)){
+                        document.getElementById("result").textContent = i;
+                        break;
+                    }
+                    else continue;
                 }
             } else {
                 window.alert("Please Enter Number Below 1299827 or Enter A Valid Integer");
                 id.value = "";
             }
         }
+
         function isPrime(num) {
+            if(num <= 1) return false;
             for (var i = 2; i < num; i++) {
                 if (num % i === 0) {
                     return false;
@@ -35,16 +52,6 @@
             return true;
         }
     </script>
-</head>
-
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <input type="text" id="num" />
-            <button id="btn" onclick="checkPrime();return false">
-                Click To Get Next Prime Number</button>
-        </div>
-    </form>
 </body>
 
 </html>
