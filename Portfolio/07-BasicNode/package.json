@@ -1,0 +1,20 @@
+{
+  "name": "07-basicnode",
+  "version": "1.0.0",
+  "description": "Node test portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Portfolio"
+  ],
+  "author": "Omar A.",
+  "license": "ISC",
+  "dependencies": {
+    "star-wars-quotes": "^1.0.2",
+    "superheroes": "^4.0.0",
+    "supervillains": "^4.0.0"
+  }
+}
