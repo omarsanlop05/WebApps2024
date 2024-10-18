@@ -6,7 +6,7 @@ This project uses html templates to create responses
 
 ---
 
-### Get
+### Get DONE
 
 - Allow the root path to return the _index.html_ file provided.
 - Configure the **form** at _index.html_ to connect to the GET method of the **/greet** endpoint and retrieve the value from the form and log the value to console.
@@ -17,7 +17,7 @@ This project uses html templates to create responses
 
 ---
 
-### Post
+### Post DONE
 
 - Add a list to _index.html_ with the title **TODO List**
 - Add a form directed towards the **/task** endpoint via the POST method and retrieve the new task from the form, and add it to the list.
@@ -26,20 +26,20 @@ This project uses html templates to create responses
 
 ---
 
-### Delete
+### Delete DONE
 
 - To every item in the task list add a delete button directed to the _delete_ action of the **/task** endpoint.
 - Then redirect it to the same page.
 
 ---
 
-### Redirect
+### Redirect DONE
 
 - Make sure that the url on top never changes
 
 ---
 
-### Put
+### Put DONE
 
 - On the PUT method of the **/greet** endpoint, receive a name as a parameter in the url and add it to the list of names.
 - Return the list of all names in a JSON response.
@@ -48,6 +48,6 @@ This route will only be accesible via Postman.
 
 ---
 
-### ERROR handling
+### ERROR handling DONE
 
 - In the **/greet** endpoint that receives the call for forwarding to _wazzup.html_ check on the index value to see if it is within range. If it is not, using the next parameter, create a new handler that outputs the error message in the index page.

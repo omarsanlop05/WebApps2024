@@ -1,0 +1,50 @@
+<%- include("partials/header"); -%>
+
+    <% if (locals.error) { %>
+        <h3>
+            <%= error %>
+        </h3>
+    <% } %>
+
+    <h2>Users</h2>
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="submit" value="go next">
+    </form>
+
+    <% if (nameList[nameList.length-1]) {%>
+        <p>Hello, <%= nameList[nameList.length-1] %> <br/></p>
+    <% } %>
+
+    <% nameList.forEach((value, index) => { %>
+        <ul>
+            <li>Hello, <a href="/greet/<%= index%>"><%= value %></a></li>
+        </ul>
+    <% }) %>
+
+    <hr/>
+
+    <h2>TODO list</h2>
+    <form action="/task" method="post">
+        Add new task:
+        <input type="text" name="task" id="task">
+        <input type="submit" value="add">
+    </form>
+
+    <% taskList.forEach((value, index) => { %>
+        <% if(value != null){ %>
+            <ul>
+                <li>
+                    <a href="/delete/<%= index %>"><i class="fa-solid fa-trash"></i></a> 
+                    <%= value %> 
+                    <a href="/up/<%= index %>"><i class="fa-solid fa-arrow-up"></i></a>
+                    <a href="/down/<%= index %>"><i class="fa-solid fa-arrow-down"></i></a>
+                </li>
+
+            </ul>
+        <% } %>
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>

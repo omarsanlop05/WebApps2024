@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+
+    <% if(flag){ %>
+        <h1>Success!!</h1>
+        <h3>Wazzup <%= name %>
+        </h3>
+    <%} else{%>
+        <p>Error: index out of range</p>
+    <%}%>
+    <br />
+    <a href="/">
+        Go back </a>
+    
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,19 @@
+{
+  "name": "09-expresspersonalapi",
+  "version": "1.0.0",
+  "description": "Porfolio 09 Personal API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "API"
+  ],
+  "author": "Omar A.",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
