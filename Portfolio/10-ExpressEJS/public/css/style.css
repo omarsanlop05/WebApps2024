@@ -6,3 +6,8 @@ html {
 body {
     background-color: beige !important;
 }
+
+img {
+    width: 300px;
+    height: 300px;
+}

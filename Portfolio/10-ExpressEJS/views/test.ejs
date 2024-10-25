@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+
+    <img src="./images/StarLion.png" alt="lion brewery" />
+    <h1>Welcome to my landing page</h1>
+    <h2>Get Method</h2>
+    <form action="/login" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+    <br/>
+    <h2>Post Method</h2>
+    <form action="/login" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+    </form>
+    <hr/>
+    
+<%- include("partials/footer"); -%>

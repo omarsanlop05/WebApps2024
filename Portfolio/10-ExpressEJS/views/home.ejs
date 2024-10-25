@@ -1,0 +1,45 @@
+<%- include("partials/header"); -%>
+
+    <img src="./images/StarLion.png" alt="lion brewery" />
+    <% if (locals.name){ %>
+        <h1>Welcome again, <%= name%></h1>
+
+        <h2>Posts</h2>
+
+        <h3>New post</h3>
+        <form action="/add" method="post">
+            <input type="text" name="title" id="title" placeholder="Title"/>
+            <input type="text" name="content" id="cont" placeholder="Content"/>
+            <input type="submit"/>
+        </form>
+        <hr/>
+        <% if(posts.length===0){ %>
+            <p>There are no posts.</p>
+        <% } else {%>
+            <ul>
+            <% posts.forEach((element, index) => { %>
+                <li>
+                    <h3><%= element.title%></h3>
+                    <p>
+                        <% if(element.content.length <= 100) { %>
+                            <%= element.content %>
+                        <% } else {%>
+                            <%= element.content.substring(0,100)%>(...)
+                        <% } %>
+                    </p>
+                    
+                    <p>
+                        <a href="/posts/<%= index%>">Read More</a>
+                    </p>
+                </li>
+            <% }); %>
+            </ul>
+        <% } %>
+
+    <% } else { %>
+        <h2>Oh no! the user has been lost</h2>
+        <p>Return to <a href="/">main menu</a> to log back in.</p>
+    <% } %>
+    
+
+<%- include("partials/footer"); -%>

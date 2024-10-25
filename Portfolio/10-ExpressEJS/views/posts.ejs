@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+    
+<% if (locals.name){ %>
+    <h1><%= post.title%></h1>
+    <hr/>
+    <p><%= post.content%></p>
+
+    <h2>Edit content</h2>
+
+    <form action="/edit/<%= index%>" method="POST">
+        <input type="text" name="title" value="<%= post.title%>"/>
+        <input type="text" name="content" value="<%= post.content%>"/>
+        <input type="submit">
+    </form>
+
+    <p><a href="/delete/<%= index%>">Delete</a></p>
+
+    <p><a href="/home">Back to posts</a></p>
+
+<% } else { %>
+    <h2>Oh no! the user has been lost</h2>
+    <p>Return to <a href="/">main menu</a> to log back in.</p>
+<% } %>
+
+<%- include("partials/footer"); -%>

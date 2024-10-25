@@ -19,7 +19,7 @@ This exercise will ilustrate how do we use EJS to create dynamic content using E
 
 ---
 
-### Basic interaction
+### Basic interaction DONE
 
 - Configure the form so it allows to submit the name of the user to the server via the **/login** endpoint.
   - Try it with an unsecured and secured version (GET/POST)
