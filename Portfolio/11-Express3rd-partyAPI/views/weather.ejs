@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather report</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Climate</h1>
+
+        <div class="weather-info">
+            <% if (error) { %>
+                <h2 class="error"><%= error %></h2>
+            <% } else if (weatherData) { %>
+                <h2>Weather in <%= city.charAt(0).toUpperCase() + city.slice(1) %></h2>
+                <p>Temperature: <%= temp %>°C</p>
+                <p>Description: <%= weatherData.weather[0].description.charAt(0).toUpperCase() + weatherData.weather[0].description.slice(1) %></p>
+                <img src="<%= iconURL %>" alt="<%= weatherData.weather[0].description %>">
+            <% } %>
+        </div>
+
+        <form action="/weather" method="post">
+            <label for="cityName">Enter another city:</label>
+            <input type="text" name="cityName" id="cityName" required>
+            <button type="submit">Go</button>
+        </form>
+        <br/>
+        <p><a href="/">Back to homepage</a></p>
+    </div>
+</body>
+</html>

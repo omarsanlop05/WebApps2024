@@ -8,7 +8,7 @@ const app = express();
 
 // https get
 app.get("/", (req, res) => {
-  var url = "http://placekitten.com/g/300/300";
+  var url = "https://placekitten.com/g/300/300";
   https.get(url, (response) => {
     console.log(response.statusCode);
     response.on("data", (data) => {
