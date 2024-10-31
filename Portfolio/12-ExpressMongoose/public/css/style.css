@@ -1,26 +1,126 @@
-html {
-    min-height: 100%;
-    position: relative;
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: beige;
 }
 
-body {
-    background-color: beige !important;
+.container {
+    max-width: 95%;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-img {
-    width: 80px;
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#num,
-#code {
-    width: 35px;
+header img {
+    width: 100px;
 }
 
-form input,
-select {
-    border-style: none;
+header h1 {
+    font-size: 1.8rem;
+    color: #444;
 }
 
-input[type=text]:focus {
-    border: 4px solid #c9b220;
+.driver-form {
+    display: grid;
+    gap: 1rem;
+}
+
+h2 {
+    color: #5a5a5a;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #c9b220;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="url"],
+.form-group select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+select:focus {
+    border-color: #c9b220;
+    box-shadow: 0 0 5px rgba(201, 178, 32, 0.5);
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c9b220;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #b29c1c;
+}
+
+.driver-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.driver-table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.driver-table th, .driver-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.driver-table th {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.driver-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.driver-table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.driver-table a:hover {
+    text-decoration: underline;
 }

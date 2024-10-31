@@ -1,0 +1,89 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+    <header>
+        <img src="/images/StarLion.png" alt="lion brewery" />
+        <h1>Welcome to my F1 DB</h1>
+    </header>
+
+    <body>
+        <form action="/driver" method="post" class="driver-form">
+            <h2>Driver Information</h2>
+            
+            <div class="form-group">
+                <input type="text" name="num" id="num" placeholder="Number" />
+                <input type="text" name="code" id="code" placeholder="Code" />
+                <input type="text" name="name" id="name" placeholder="Name" />
+                <input type="text" name="lname" id="lname" placeholder="Last name" />
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of birth: </label>
+                <input type="date" name="dob" id="dob" />
+            </div>
+
+            <div class="form-group">
+                <label for="url">Biography URL: </label>
+                <input type="url" name="url" id="url" placeholder="https://example.com" />
+            </div>
+            
+            <div class="form-group">
+                <label for="nation">Nationality: </label>
+                <select name="nation" id="nation">
+                    <% countries.forEach(country => { %>
+                        <option value="<%= country.nationality %>"><%= country.label %></option>
+                    <% }) %>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="team">Team: </label>
+                <select name="teamName" id="teamName">
+                    <% teams.forEach(team => { %>
+                        <option value="<%= team.name %>"><%= team.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <hr/>
+        <h2>Driver List</h2>
+        <table class="driver-table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Code</th>
+                    <th>Forename</th>
+                    <th>Surname</th>
+                    <th>Date of Birth</th>
+                    <th>Nationality</th>
+                    <th>Biography URL</th>
+                    <th>Team</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% drivers.forEach(driver => { %>
+                    <tr>
+                        <td><%= driver.num %></td>
+                        <td><%= driver.code %></td>
+                        <td><%= driver.forename %></td>
+                        <td><%= driver.surname %></td>
+                        <td><%= driver.dob.toISOString().split('T')[0] %></td>
+                        <td><%= driver.nationality %></td>
+                        <td><a href="<%= driver.url %>" target="_blank">Link</a></td>
+                        <td><%= driver.team ? driver.team.name : 'N/A' %></td>
+                        <td>
+                            <a href="/drivers/edit/<%= driver._id %>">Edit</a> <!-- Edit Link -->
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </body>
+</div>
+
+<%- include("partials/footer"); -%>
